@@ -1,11 +1,11 @@
-# `@bluefuntor/library-template`
+# `@bluefunctor/library-template`
 
 > TODO: description
 
 ## Usage
 
 ```
-const libraryTemplate = require('@bluefuntor/library-template');
+const libraryTemplate = require('@bluefunctor/library-template');
 
 // TODO: DEMONSTRATE API
 ```

@@ -1,10 +1,10 @@
 {
-  "name": "@bluefuntor/library-template",
+  "name": "@bluefunctor/library-template",
   "version": "0.0.0",
-  "description": "A template to create component libraries.",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
   "author": "georgelivas <giorgos.livas.99@gmail.com>",
-  "homepage": "https://github.com/Blue-Functor/create-component-library#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/library-template.js",
   "directories": {
     "lib": "lib",
@@ -14,7 +14,7 @@
     "lib"
   ],
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.yarnpkg.com"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,5 @@
   "bugs": {
     "url": "https://github.com/Blue-Functor/create-component-library/issues"
   },
-  "dependencies": {
-    "@bluefunctor/library-template-button": "^0.0.0",
-    "@bluefunctor/library-template-utils": "^0.0.0"
-  }
+  "homepage": "https://github.com/Blue-Functor/create-component-library#readme"
 }

@@ -1,2 +1,7 @@
-export * from '@bluefunctor/library-template-button';
-export * from '@bluefunctor/library-template-utils';
+'use strict';
+
+module.exports = libraryTemplate;
+
+function libraryTemplate() {
+    // TODO
+}

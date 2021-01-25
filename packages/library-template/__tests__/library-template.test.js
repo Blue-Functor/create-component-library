@@ -2,6 +2,6 @@
 
 const libraryTemplate = require('..');
 
-describe('@bluefuntor/library-template', () => {
+describe('@bluefunctor/library-template', () => {
     it('needs tests');
 });
