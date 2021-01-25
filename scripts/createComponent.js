@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { execSync } = require('child_process');
 const config = require('../library.json');
 
@@ -11,9 +12,11 @@ if (componentNames.length < 1) {
 const createComponent = name => {
     execSync(`lerna create ${name} --yes`);
     console.log(name, ' Created!');
-    execSync(` lerna add @bluefunctor/library-builder --dev --scope=${name}`);
-    execSync(` lerna add react --dev --scope=${name}`);
-    execSync(` lerna add react@17.x --peer --scope=${name}`);
+    execSync(`lerna add @bluefunctor/library-builder --dev --scope=${name}`);
+    execSync(`lerna add react --dev --scope=${name}`);
+    execSync(`lerna add react@17.x --peer --scope=${name}`);
+    execSync(`lerna add ${name} --scope=${config.npmOrg}/${config.libraryName}`);
+    fs.appendFileSync(`packages/${config.libraryName}/lib/${config.libraryName}.js`, `export * from '${name}';`);
 };
 
 componentNames.map(name => createComponent(`${config.npmOrg}/${config.libraryName}-${name}`));

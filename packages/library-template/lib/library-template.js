@@ -1,7 +1,1 @@
-'use strict';
-
-module.exports = libraryTemplate;
-
-function libraryTemplate() {
-    // TODO
-}
+export * from '@bluefunctor/library-template-my-component';
