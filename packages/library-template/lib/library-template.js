@@ -1,1 +1,2 @@
-export * from '@bluefunctor/library-template-my-component';
+export * from '@bluefunctor/library-template-utils';
+export * from '@bluefunctor/library-template-button';
