@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../component-library-template/.idea/component-library-template.iml" filepath="$PROJECT_DIR$/../component-library-template/.idea/component-library-template.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/create-component-library.iml" filepath="$PROJECT_DIR$/.idea/create-component-library.iml" />
     </modules>
   </component>

@@ -1,0 +1,23 @@
+.container {
+    width: 100vw;
+    display: block;
+}
+
+.link {
+    text-decoration: none;
+    color: #1ea7fd;
+}
+
+.paragraph {
+    font-size: 12pt;
+    margin-bottom: 4px;
+}
+
+.code {
+    display: inline-block;
+    font-size: 12pt;
+    background-color: #000000;
+    color: rgba(255,255,255,0.75);
+    border-radius: 5px;
+    padding: 12px;
+}
