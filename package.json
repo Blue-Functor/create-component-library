@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "createComponent": "node scripts/createComponent.js",
     "build":  "lerna run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

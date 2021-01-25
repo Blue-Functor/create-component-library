@@ -1,22 +1,14 @@
 0 silly argv {
-0 silly argv   _: [ 'create' ],
+0 silly argv   _: [ 'add' ],
+0 silly argv   dev: true,
+0 silly argv   D: true,
+0 silly argv   scope: '{@bluefunctor/library-template-utils,@bluefunctor/library-template-button}',
+0 silly argv   globs: [],
 0 silly argv   lernaVersion: '3.22.1',
-0 silly argv   '$0': '../../.npm/_npx/26651/bin/lerna',
-0 silly argv   name: '@blue-funtor/library'
+0 silly argv   '$0': 'lerna',
+0 silly argv   pkg: '@bluefunctor/library-template-builder'
 0 silly argv }
 1 notice cli v3.22.1
 2 verbose rootPath /Users/georgelivas/GitHub/create-component-library
-3 warn ENOREMOTE No git remote found, skipping repository property
-4 error Error: canceled
-4 error     at Interface.<anonymous> (/Users/georgelivas/node_modules/read/lib/read.js:66:13)
-4 error     at Interface.emit (events.js:315:20)
-4 error     at Interface._ttyWrite (readline.js:875:16)
-4 error     at ReadStream.onkeypress (readline.js:213:10)
-4 error     at ReadStream.emit (events.js:315:20)
-4 error     at emitKeys (internal/readline/utils.js:345:14)
-4 error     at emitKeys.next (<anonymous>)
-4 error     at ReadStream.onData (readline.js:1144:36)
-4 error     at ReadStream.emit (events.js:315:20)
-4 error     at addChunk (_stream_readable.js:309:12)
-4 error     at readableAddChunk (_stream_readable.js:284:9)
-4 error     at ReadStream.Readable.push (_stream_readable.js:223:10)
+3 error Error: 404 Not Found - GET https://registry.npmjs.org/@bluefunctor%2flibrary-template-builder - Not found
+3 error     at /Users/georgelivas/GitHub/create-component-library/node_modules/@evocateur/npm-registry-fetch/check-response.js:104:15
