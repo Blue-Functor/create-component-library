@@ -1,0 +1,99 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+
+<Meta title="System/Utils/generateSubstories()" />
+
+# generateSubstories()
+<br />
+<br />
+
+The `generateSubstories` function creates multiple sub-stories for the same `Component`.
+
+> `generateSubstories` should be used after creating the main story and exporting it as default.
+
+
+## Arguments
+
+- **Template**: (*Component*) The Template is a component that passes arguments to the component of the story.
+- **...story options**: (*coma-separated Objects*) Each `Object` represents a sub-story. These `props` will be passed to the arguments of the component in the `Template`.
+    - **options**: (*Object*)
+        - **name**: (*String*) The title of the sub-story.
+        - **props**: (*Object*) These `props` will be passes to the arguments of the component in the Template.
+        - **description**: (*String* | *Markdown*) Will be placed above the sub-story.
+
+## Returns
+
+**stories**: (*Object*) The object has the names of each `option` from the props as `key` and holds the generated Story as `value`;
+
+## Example
+
+Generating a single Story
+
+<Source
+    language={'javascript'}
+    dark
+    code={`
+const stories = generateSubstories(
+    Template,
+    {
+      name: 'Primary',
+      description: 'some story **markdown**',
+      props: {
+        primary: true,
+        label: 'Button',
+      },
+    }
+);
+    `}
+/>
+
+Generating multiple Stories
+
+<Source
+    language={'javascript'}
+    dark
+    code={`
+const stories = generateSubstories(
+    Template,
+    {
+      name: 'Primary',
+      description: 'some story **markdown**',
+      props: {
+        primary: true,
+        label: 'Button',
+      },
+    },
+    {
+      name: 'Secondary',
+      description: 'Typically used for less-pronounced actions.',
+      props: {
+        label: 'Button',
+      },
+    },
+    {
+      name: 'Large',
+      description: 'Use \`size\` to draw attention',
+      props:{
+        size: 'large',
+        label: 'Button',
+      },
+    },
+    {
+      name: 'Small',
+      props:{
+        size: 'small',
+        label: 'Button',
+      },
+    },
+);
+    `}
+/>
+
+## Using the generated Stories
+
+> In order to use the returned stories, you have to export them.
+
+To export them all in one line, deconstruct the returned object with the values you provided as `name` in each sub-story object.
+
+```javascript
+export const { Primary, Secondary, Large, Small } = stories;
+```

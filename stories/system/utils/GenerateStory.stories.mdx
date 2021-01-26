@@ -1,0 +1,57 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+
+<Meta title="System/Utils/generateStory()" />
+
+# generateStory()
+<br />
+<br />
+
+The `generateStory` function creates a sub-story.
+
+> `generateStory` should be used after creating the main story and exporting it as default.
+
+
+## Arguments
+
+- **options**: (*Object*)
+    - **Template**: (*Component*) The Template is a component that passes arguments to the component of the story.
+    ```javascript
+        const Template = args => <YourComponent {...args} />;
+    ```
+    - **props**: (*Object*) These `props` will be passes to the arguments of the component in the Template.
+    - **description**: (*String* | *Markdown*) Will be placed above the sub-story.
+
+## Returns
+
+**Story**: (*Component*) The sub-story component should be assigned to a `const` and exported.
+
+## Example
+
+Simple Story
+
+<Source
+language={'javascript'}
+dark
+code={`
+const Greeting = generateStory({
+    Template,
+    props: {},
+});
+    `}
+/>
+
+Story with `Description` and props for the component.
+
+<Source
+    language={'javascript'}
+    dark
+    code={`
+const Greeting = generateStory({
+    Template,
+    props: {
+        message: 'Hello!',
+    },
+    description: 'This component says \`Hello!\`'
+});
+    `}
+/>

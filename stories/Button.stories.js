@@ -1,36 +1,87 @@
-import React from 'react';
+import { Description, createMainStory, generateSubstories } from '../packages/library-template-utils';
 
-import { Button } from './Button';
+import { Button } from '../packages/library-template-button';
 
-export default {
+const story = createMainStory({
   title: 'Example/Button',
   component: Button,
+  description: (
+      <Description
+          name={'Button'}
+          description={'Buttons allow users to take actions, and make choices, with a single tap.'}
+          packageUrl={'https://bit.dev/georgelivas/storybook-template/button'}
+          installCommand={'$ yarn add @bit/georgelivas.storybook-template.button'}
+      />
+  ),
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: {
+      control: 'color',
+      description: 'Button background color',
+      default: '#fff',
+    },
+    label: {
+      description: 'The text of the button',
+      control: {
+        type: 'text',
+      },
+    },
+    primary: {
+      description: 'The color of the button',
+      table: {
+        type: {
+          summary: 'more',
+          detail: 'This color come from the theme of the project.'
+        },
+      },
+    },
+    size: {
+      description: 'The size can be `small` `medium` or `large`',
+      control: {
+        type: 'text',
+      },
+    }
   },
-};
+});
 
 const Template = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
+const stories = generateSubstories(
+    Template,
+    {
+      name: 'Primary',
+      description: 'some story **markdown**',
+      props: {
+        primary: true,
+        label: 'Button',
+      },
+    },
+    {
+      name: 'Secondary',
+      description: 'Typically used for less-pronounced actions.',
+      props: {
+        label: 'Button',
+      },
+    },
+    {
+      name: 'Large',
+      description: `Use \`size\` to draw attention
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+- \`small\`
+- \`medium\` default
+- \`small\``,
+      props:{
+        size: 'large',
+        label: 'Button',
+      },
+    },
+    {
+      name: 'Small',
+      props:{
+        size: 'small',
+        label: 'Button',
+      },
+    },
+);
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const { Primary, Secondary, Large, Small } = stories;
+export default story;

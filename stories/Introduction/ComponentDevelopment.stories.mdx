@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction/Component Development" />
+
+# Component Development
+
+Components consist of a `component` directory in the `src/components` folder and a `Component.stories.js` file.
+
+> The `component` directory should include all the files the component needs and should have as few dependencies as possible.
+
+## To create your first component:
+
+### 1. Create a `component` folder in the `src/components` directory.
+
+### 2. In your `component` folder create a `Component.js` file and paste the following:
+
+```javascript
+const Component = () => (
+    <h1>Hello world!</h1>
+);
+
+export default Component;
+```
+
+### 3. In your `component` folder create an `index.js` file and paste the following:
+
+```javascript
+export { default } from './Component';
+```
+
+### 4. Next create a `Component.stories.js` file in the `src/stories` directory with the following:
+
+```javascript
+import Component from './index';
+
+import { createMainStory, generateStory } from './index';
+
+const story = createMainStory({
+    title: 'Example/Component',
+    component: Component,
+});
+
+const Template = (args) => <Component {...args} />;
+
+const Greeting = generateStory({
+    Template,
+    props: {},
+});
+
+export { Greeting };
+export default story;
+
+```
+
+> This is the minimum required to start developing components with Storybook. For instructions on how to create documentation for your components and how to use the utility functions provided please take a look at the `Documentation` chapter.

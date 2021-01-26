@@ -1,0 +1,87 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+
+<Meta title="System/Utils/createMainStory()" />
+
+# createMainStory()
+<br />
+<br />
+
+The `createMainStory` function creates the story object that should be exported using `export default`.
+
+
+## Arguments
+
+- **options**: (*Object*)
+    - **title**: (*String*) The title of the Story.
+    - **component**: (*Component*) The `Component` of the Story.
+    - **description**: (*String* | *Component*) Will be placed under the title of the Story.
+    - **argTypes**: (*Object*) Descriptions and controls for the `props` table of the Story. [More...](https://storybook.js.org/docs/react/writing-stories/args)
+    - **options**: (*Object*) You can use the options to pass extra parameters to the generated object.
+
+## Returns
+
+**story**: (*Object*) The Story object that storybook expects to be exported as default from a `*.stories.js` file.
+
+## Example
+
+Simple Story
+
+<Source
+    language={'javascript'}
+    dark
+    code={`
+    const story = createMainStory({
+    title: 'Example/Component',
+    component: Component,
+});
+    `}
+/>
+
+Story with `Description` and argument descriptions.
+
+<Source
+    language={'javascript'}
+    dark
+    code={`
+    const story = createMainStory({
+  title: 'Example/Button',
+  component: Button,
+  description: (
+      <Description
+          name={'Button'}
+          description={'Buttons allow users to take actions, and make choices, with a single tap.'}
+          packageUrl={'https://bit.dev/georgelivas/storybook-template/button'}
+          installCommand={'$ yarn add @bit/georgelivas.storybook-template.button'}
+      />
+  ),
+  argTypes: {
+    backgroundColor: {
+      control: 'color',
+      description: 'Button background color',
+      default: '#fff',
+    },
+    label: {
+      description: 'The text of the button',
+      control: {
+        type: 'text',
+      },
+    },
+    primary: {
+      description: 'The color of the button',
+      table: {
+        type: {
+          summary: 'more',
+          detail: 'This color come from the theme of the project.'
+        },
+      },
+    },
+    size: {
+      description: 'The size can be \`small\` \`medium\` or \`large\`',
+      control: {
+        type: 'text',
+      },
+    }
+  },
+});
+`}
+/>
