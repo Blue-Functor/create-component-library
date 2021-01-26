@@ -1,23 +1,20 @@
 .container {
-    width: 100vw;
+    /*width: 100vw;*/
     display: block;
 }
 
-.link {
-    text-decoration: none;
-    color: #1ea7fd;
+.toolbar-container {
+    height: 130px;
 }
 
-.paragraph {
-    font-size: 12pt;
-    margin-bottom: 4px;
+.toolbar {
+    border-top: 1px solid #ccc;
+    width: 200px;
 }
 
-.code {
-    display: inline-block;
-    font-size: 12pt;
-    background-color: #000000;
-    color: rgba(255,255,255,0.75);
-    border-radius: 5px;
-    padding: 12px;
+.tabs {
+    position: relative;
+    left: 50%;
+    top: -140px;
+    width: 50%;
 }

@@ -8,7 +8,7 @@ const story = createMainStory({
             name={'Description'}
             description={'Add description to your Stories.'}
             packageUrl={'https://bit.dev/georgelivas/storybook-template/button'}
-            installCommand={'$ yarn add @bit/georgelivas.storybook-template.button'}
+            installCommand={'@bit/georgelivas.storybook-template.button'}
             body={
                 `Description is used to add a description text with a link to the documentation of a component.
                 To use is pass it as a parameter in the createMainStory function. for more info see the Component Documentation guide.`
@@ -53,7 +53,7 @@ export const Primary = generateStory(
             name: 'Description',
             description: 'The Description is added on the top of each Story.',
             packageUrl: 'https://bit.dev/georgelivas/storybook-template/button',
-            installCommand: '$ yarn add @bit/georgelivas.storybook-template.button',
+            installCommand: '@bit/georgelivas.storybook-template.button',
             body: `Description is used to add a description text with a link to the documentation of a component.
                   To use is pass it as a parameter in the createMainStory function. for more info see the Component Documentation guide.`
         },

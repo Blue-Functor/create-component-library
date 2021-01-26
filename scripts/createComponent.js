@@ -6,7 +6,7 @@ const { component, story } = require('./templates');
 const componentNames = process.argv.slice(2);
 
 if (componentNames.length < 1) {
-    console.error('ERROR: Please specify component name.');
+    console.error('ERROR: Please specify at least one component name.');
     process.exit(-1)
 }
 
@@ -52,6 +52,6 @@ const createComponent = componentName => {
 
 };
 
-componentNames.map(name => createComponent(name));
+componentNames.map(createComponent);
 
 exports.createComponent = createComponent;

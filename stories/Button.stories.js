@@ -10,7 +10,7 @@ const story = createMainStory({
           name={'Button'}
           description={'Buttons allow users to take actions, and make choices, with a single tap.'}
           packageUrl={'https://bit.dev/georgelivas/storybook-template/button'}
-          installCommand={'$ yarn add @bit/georgelivas.storybook-template.button'}
+          installCommand={'@bit/georgelivas.storybook-template.button'}
       />
   ),
   argTypes: {
