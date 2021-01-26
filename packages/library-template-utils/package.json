@@ -33,6 +33,10 @@
     "react": "^17.0.1"
   },
   "peerDependencies": {
+    "copy-to-clipboard": "^3.3.1",
     "react": "17.x"
+  },
+  "dependencies": {
+    "copy-to-clipboard": "^3.3.1"
   }
 }
