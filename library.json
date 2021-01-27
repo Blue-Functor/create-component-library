@@ -1,7 +1,7 @@
 {
   "npmOrg": "@bluefunctor",
-  "libraryName": "library-template",
+  "libraryName": "library-template-test",
   "common": [
-    
+
   ]
 }
