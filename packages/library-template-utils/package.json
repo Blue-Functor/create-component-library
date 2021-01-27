@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/Blue-Functor/create-component-library#readme",
   "devDependencies": {
-    "@bluefunctor/library-builder": "^0.0.1",
+    "@bluefunctor/library-builder": "^0.1.0",
     "react": "^17.0.1"
   },
   "peerDependencies": {

@@ -29,6 +29,7 @@
   "homepage": "https://github.com/Blue-Functor/create-component-library#readme",
   "dependencies": {
     "@bluefunctor/library-template-button": "^0.1.0",
+    "@bluefunctor/library-template-my-component": "^0.1.0",
     "@bluefunctor/library-template-utils": "^0.1.0"
   }
 }
