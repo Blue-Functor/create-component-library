@@ -6,5 +6,8 @@ if (!config.libraryName || !config.npmOrg ) {
     process.exit(-1)
 }
 
+
+execSync(`lerna bootstrap`);
+
 execSync(`lerna create ${config.npmOrg}/${config.libraryName} --yes`);
 console.log('Library Created!');
