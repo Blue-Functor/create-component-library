@@ -1,6 +1,7 @@
 import { Description, createMainStory, generateSubstories } from '../packages/library-template-utils';
 
 import { Button } from '../packages/library-template-button';
+import { version } from '../packages/library-template-button/package.json';
 
 const story = createMainStory({
   title: 'Example/Button',
@@ -11,6 +12,7 @@ const story = createMainStory({
           description={'Buttons allow users to take actions, and make choices, with a single tap.'}
           packageUrl={'https://bit.dev/georgelivas/storybook-template/button'}
           installCommand={'@bit/georgelivas.storybook-template.button'}
+          version={version}
       />
   ),
   argTypes: {

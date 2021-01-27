@@ -1,7 +1,7 @@
 {
   "name": "@bluefunctor/library-builder",
   "version": "0.0.2",
-  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "description": "The Library Builder is a module that translates modern JavaScript code to VanillaJS and CSS, creating a /dist directory for the modules.",
   "keywords": [],
   "author": "georgelivas <giorgos.livas.99@gmail.com>",
   "license": "ISC",

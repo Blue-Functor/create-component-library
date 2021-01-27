@@ -1,11 +1,5 @@
 # `@bluefunctor/library-template`
 
-> TODO: description
+> This is an example, please do not use.
 
-## Usage
-
-```
-const libraryTemplate = require('@bluefunctor/library-template');
-
-// TODO: DEMONSTRATE API
-```
+For more information look [here](http://code.bluefunctor.com).

@@ -39,7 +39,7 @@ const createComponent = async componentName => {
     const storyCode = story({
         componentName,
         componentPath: path,
-        url: `npm.org/${npmName}`,
+        url: `https://www.npmjs.com/package/${npmName}`,
         npmName,
     });
 

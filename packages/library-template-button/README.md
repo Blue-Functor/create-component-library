@@ -1,11 +1,5 @@
 # `@bluefunctor/library-template-button`
 
-> TODO: description
+> This is an example, please do not use.
 
-## Usage
-
-```
-const libraryTemplateButton = require('@bluefunctor/library-template-button');
-
-// TODO: DEMONSTRATE API
-```
+For more information look [here](http://code.bluefunctor.com).

@@ -3,7 +3,7 @@ import InstallBox from '../installBox';
 const Description = ({
     name,
     description,
-    packageUrl='npm.org',
+    packageUrl='http://npmjs.org',
     installCommand,
     body,
     children,

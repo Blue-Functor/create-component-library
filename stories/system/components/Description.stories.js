@@ -1,4 +1,5 @@
 import { Description, createMainStory, generateStory } from '../../../packages/library-template-utils';
+import { version } from '../../../packages/library-template-utils/package.json';
 
 const story = createMainStory({
     title: 'System/Components/Description',
@@ -8,11 +9,12 @@ const story = createMainStory({
             name={'Description'}
             description={'Add description to your Stories.'}
             packageUrl={'https://bit.dev/georgelivas/storybook-template/button'}
-            installCommand={'@bit/georgelivas.storybook-template.button'}
+            installCommand={'@bluefunctor/library-template-button'}
             body={
                 `Description is used to add a description text with a link to the documentation of a component.
                 To use is pass it as a parameter in the createMainStory function. for more info see the Component Documentation guide.`
             }
+            version={version}
         />
     ),
     argTypes: {

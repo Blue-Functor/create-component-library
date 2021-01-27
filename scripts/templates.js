@@ -10,6 +10,7 @@ const story = ({ componentName, componentPath, url, npmName }) => `
 import { Description, createMainStory, generateStory } from '../packages/library-template-utils';
 
 import { ${ componentName } } from '../${ componentPath }';
+import { version } from '../${ componentPath }/package.json';
 
 const story = createMainStory({
   title: 'NEW/Component',
