@@ -1,6 +1,6 @@
 {
   "name": "@bluefunctor/library-template",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "This is an example, please do not use.",
   "keywords": [],
   "author": "georgelivas <giorgos.livas.99@gmail.com>",
@@ -29,6 +29,6 @@
   "homepage": "https://github.com/Blue-Functor/create-component-library#readme",
   "dependencies": {
     "@bluefunctor/library-template-button": "^0.0.1",
-    "@bluefunctor/library-template-utils": "^0.0.2"
+    "@bluefunctor/library-template-utils": "^0.1.0"
   }
 }

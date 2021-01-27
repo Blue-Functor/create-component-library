@@ -1,8 +1,13 @@
 {
   "name": "@bluefunctor/library-template-utils",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Useful utility functions and UI components for Storybook.",
-  "keywords": ["Storybook", "Utilities", "React", "Documentation"],
+  "keywords": [
+    "Storybook",
+    "Utilities",
+    "React",
+    "Documentation"
+  ],
   "author": "georgelivas <giorgos.livas.99@gmail.com>",
   "license": "ISC",
   "main": "lib/library-template-utils.js",
