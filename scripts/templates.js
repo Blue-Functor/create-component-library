@@ -13,7 +13,7 @@ import { ${ componentName } } from '../${ componentPath }';
 import { version } from '../${ componentPath }/package.json';
 
 const story = createMainStory({
-  title: 'NEW/Component',
+  title: 'NEW/${componentName}',
   component: ${ componentName },
   description: (
       <Description
@@ -21,6 +21,7 @@ const story = createMainStory({
           description=""
           packageUrl="${ url }"
           installCommand="${ npmName }"
+          version={version}
       />
   ),
 });
@@ -35,10 +36,5 @@ const Greeting = generateStory({
 export { Greeting };
 export default story;
 `;
-
-const templates = {
-    component,
-    story,
-};
 
 module.exports = { component, story };
