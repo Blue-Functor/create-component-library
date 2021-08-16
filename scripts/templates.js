@@ -7,26 +7,26 @@ export { ${name} };
 `;
 
 const story = ({ componentName, componentPath, url, npmName }) => `
-import { Description, createMainStory, generateStory } from '../packages/library-template-utils';
+import { Description, createMainStory, generateStory } from '../utils/library-template-utils';
 
-import { ${ componentName } } from '../${ componentPath }';
-import { version } from '../${ componentPath }/package.json';
+import { ${componentName} } from '../${componentPath}/lib';
+import { version } from '../${componentPath}/package.json';
 
 const story = createMainStory({
   title: 'NEW/${componentName}',
-  component: ${ componentName },
+  component: ${componentName},
   description: (
       <Description
-          name="${ componentName }"
+          name="${componentName}"
           description=""
-          packageUrl="${ url }"
-          installCommand="${ npmName }"
+          packageUrl="${url}"
+          installCommand="${npmName}"
           version={version}
       />
   ),
 });
 
-const Template = (args) => <${ componentName } {...args} />;
+const Template = (args) => <${componentName} {...args} />;
 
 const Greeting = generateStory({
     Template,

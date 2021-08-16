@@ -30,7 +30,7 @@ const createComponent = async componentName => {
     const path = `packages/${config.libraryName}-${kebabize(componentName)}`;
     const packagePath = `${path}/package.json`;
     const libraryIndex = `packages/${config.libraryName}/lib/${config.libraryName}.js`;
-    const componentPath = `${path}/lib/${libName}.js`;
+    const componentPath = `${path}/lib/index.js`;
     const storyPath = `stories/${componentName}.stories.js`;
     spinner.succeed();
     spinner.text = 'Generating templates';
@@ -53,18 +53,32 @@ const createComponent = async componentName => {
     spinner.text = 'Installing dependencies and connecting components';
     spinner.start();
     await new Promise(resolve => setTimeout(resolve, 5000));
-    execSync(`lerna add @bluefunctor/library-builder --dev --scope=${npmName}`);
+    execSync(`lerna add react --dev --scope=${npmName}`);
+    execSync(`lerna add @babel/cli --dev --scope=${npmName}`);
+    execSync(`lerna add @babel/core --dev --scope=${npmName}`);
+    execSync(`lerna add @babel/preset-react --dev --scope=${npmName}`);
+
+    execSync(`lerna add react@17.x --peer --scope=${npmName}`);
     spinner.succeed();
     spinner.text = 'Adding Scripts to package.json';
     spinner.start();
     const packageJson = JSON.parse(fs.readFileSync(packagePath));
-    packageJson.scripts.build = 'library-builder';
+    packageJson.scripts.build = 'rm -rf dist && mkdir dist && babel lib -d dist --copy-files';
+    packageJson.main = 'dist/index.js';
+    packageJson.directories = undefined;
+    packageJson.files = undefined;
+    packageJson.babel = {
+        "presets": [
+            [
+                "@babel/preset-react",
+                "@babel/env",
+                {
+                    "runtime": "automatic"
+                }
+            ]
+        ]
+    };
     fs.writeFileSync(packagePath, JSON.stringify(packageJson));
-    spinner.succeed();
-    spinner.text = 'Linking components';
-    spinner.start();
-    execSync(`lerna add react --dev --scope=${npmName}`);
-    execSync(`lerna add react@17.x --peer --scope=${npmName}`);
     spinner.succeed();
     spinner.text = 'Adding component to lib';
     spinner.start();
